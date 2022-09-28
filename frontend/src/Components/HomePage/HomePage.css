@@ -1,0 +1,37 @@
+.homepage_text{
+    text-align: center;
+    font-weight: 400;
+}
+.homepage_text_span{
+    color: #03a9f4;
+}
+.homepage_text_span_star{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   color: #fdd866;
+   margin-top: 20px;
+}
+.homePage_heading_button{
+    color: white;
+    border-bottom: 4px solid #008CCF;
+    width: 280px;
+    height: 56px;   
+}
+.img{
+    display: none;
+}
+.box_img:hover{
+    color: #40c4ff;
+    cursor: pointer;
+}
+.box_img:hover .img{
+    display: block;
+}
+.home_page_seeFeatures_button{
+    color: white;
+    border-bottom: 4px solid #008CCF;
+    width:280px;
+    height:56px; 
+    /* letter-spacing: 2px; */
+}
