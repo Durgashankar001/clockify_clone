@@ -1,9 +1,11 @@
 import './App.css';
 
+import Time_Tracker from './Components/Time_Tracker/Time_Tracker';
+
 function App() {
   return (
     <div className="App">
-     HAPPY HACKING!
+    {/* <Time_Tracker/> */}
     </div>
   );
 }
