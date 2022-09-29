@@ -27,7 +27,7 @@ const Links = ({ children }) => (
         rounded={"md"}
         _hover={{
             textDecoration: "none",
-            bg: useColorModeValue("gray.200", "gray.700"),
+            bg: useColorModeValue("blue.400", "blue.400"),
         }}
         to={`/${children}`}
     >
@@ -64,8 +64,8 @@ const Navbar = () => {
                             spacing={4}
                             display={{ base: "none", md: "flex" }}
                         >
-                            {links.map((link) => (
-                                <Links key={link}>{link}</Links>
+                            {links.map((el) => (
+                                <Links key={el}>{el}</Links>
                             ))}
                         </HStack>
                     </HStack>

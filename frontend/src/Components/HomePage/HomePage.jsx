@@ -30,6 +30,108 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import { RiTeamLine } from "react-icons/ri";
 import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
+import Slider from './slider';
+
+
+const row1 = [
+    {
+        title: "Great experience",
+        feedback: "It has really helped me become more organized",
+        client: "— Lauren Leonard, Illustrator",
+    },
+    {
+        title: "A game-changer for remote work",
+        feedback: "I can track my phone-a week taps and I'm ready to get into my work",
+        client: "— Keri Mackay Coordinator",
+    },
+    {
+        title: "It has greatly improved our business",
+        feedback: "Before Clockify we had no idea of how long we were spending on each event.",
+        client: "— Hilary Raeside, Excutive Assistant",
+    },
+    {
+        title: "Grows with you",
+        feedback: "I Love how clockify allows my contractors to independently log billable hours.",
+        client: "— Camreon Sursa,enterpeneur",
+    },
+    {
+        title: "An amazing experience!",
+        feedback: "Works exactly like you'd hope, feature-rich, and has helped us realize profits.",
+        client: "— Torre Capistran, Entrepreneur",
+    },
+    {
+        title: "Affordable price and support",
+        feedback: "New features appearing every month. Great and helpful customer support.",
+        client: "— Maciej Tkaczyk, Manager",
+    },
+    {
+        title: "Very useful and intuitive",
+        feedback: "Extremely comfortable. Ads free. Amazing in terms of customer support.",
+        client: "— Ivan Napolskykh, Software Engineer,",
+    }
+]
+
+const row2 = [
+    {
+        title: "One of the best values available online",
+        feedback: "Really good. Overall, this is a TREMENDOUS value for the price.",
+        client: "— Patrick Carver, Entrepreneur",
+    },
+    {
+        title: "Best time tracker",
+        feedback: "Clockify has become a basic in my set of freelance tools.",
+        client: "— Luis Miguel Rivas Zepeda, Software Engineer",
+    },
+    {
+        title: "Seamless time tracking",
+        feedback: "Clockify is so easy to use and intuitive. The learning curve is almost none.",
+        client: "— Sheila Zayas, Graphic Design",
+    },
+    {
+        title: "Clockify is scary good!",
+        feedback: "It is a powerful and often frightening insight into your own behavior.",
+        client: "— Skyler Bird, Web Designer",
+    },
+    {
+        title: "Finally an intuitive online time logger",
+        feedback: "I like that it is available to me online and can use it wherever I am.",
+        client: "— Michele Wong, Entrepreneur",
+    },
+
+]
+
+const row3 = [
+    {
+        title: "Works great for startups",
+        feedback: "We grew from a couple people to almost 80 and it worked perfectly the whole time!",
+        client: "— Zachary Gaskill, Sales Manager",
+    },
+    {
+        title: "Fantastic",
+        feedback: "Makes it incredibly easy to record time and attach pdf reports to invoices.",
+        client: "— David Jackson, Consultant",
+    },
+    {
+        title: "Best time tracking software!",
+        feedback: "I use Clockify for work, but it also lets me know exactly what I am doing in my day!",
+        client: "— Marc Wolfe, Marketing Manager",
+    },
+    {
+        title: "Best timesheet software on the market",
+        feedback: "Easy to use. Quick to maneuver. Excellent reporting and administration.",
+        client: "— Anurag K, Database Engineer,",
+    },
+    {
+        title: "Wonderful for tracking productivity",
+        feedback: "I enjoy it so much I use outside of work to track my own personal self-development.",
+        client: "— Jessup S, Operations Associate",
+    },
+    {
+        title: "I feel more productive!",
+        feedback: "It's really encouraging to look back and see how much I've accomplished!",
+        client: "— Kristen Eisentrager, Creative Coordinator",
+    },
+]
 
 
 const boxData = [
@@ -814,9 +916,9 @@ const HomePage = () => {
                     </Text>
                 </Flex>
 
-                <Divider mt={20}/>
+                <Divider mt={20} />
             </div>
-            <div style={{background: "#f7fcff",paddingTop:"3rem"}}>
+            <div style={{ background: "#f7fcff", paddingTop: "3rem" }}>
                 <Text textAlign={"center"} fontSize={"sm"} color={"gray"}>
                     #1 RATED SOFTWARE
                 </Text>
@@ -828,12 +930,77 @@ const HomePage = () => {
                     size={["lg", "xl"]}
                     color={"gray.600"}
                 >
-                   Join millions of happy users
+                    Join millions of happy users
                 </Heading>
                 <Text textAlign={"center"} fontSize={["lg", "xl"]} color={"gray"}>
-                Clockify is the best rated time tracking software with 4,000+ reviews.
+                    Clockify is the best rated time tracking software with 4,000+ reviews.
                 </Text>
 
+                <Flex
+                    wrap={"nowrap"}
+                    overflowX={"hidden"}
+                    justifyContent={"center"}
+                    mt={10}
+                    mb={10}
+                    flexDir={"row"}
+                >
+                    <Box minW={"100%"} m={"auto"}>
+                        <Image
+                            maxW={"100%"}
+                            src="https://clockify.me/assets/images/customer-feedback-logo-expanded-3.svg"
+                        ></Image>
+                    </Box>
+                </Flex>
+                <Slider data={row1} dir={"left"} />
+                <Slider data={row2} dir={"right"} />
+                <Slider data={row3} dir={"left"} />
+            </div>
+            <div>
+                <Heading
+                    mt={20}
+                    mb={2}
+                    textAlign={"center"}
+                    fontWeight={"400"}
+                    size={["lg", "xl"]}
+                    color={"gray.600"}
+                >
+                    Start tracking time with Clockify
+                </Heading>
+                <Text textAlign={"center"} fontSize={["xs", "sm"]} color={"gray"}>
+                    24/7 Support • Cancel Anytime • Free Forever
+                </Text>
+                <Flex flexDir={"column"} alignItems={"center"} mt={10}>
+                    <Button
+                        color={"white"}
+                        p={[1, 7]}
+                        boxShadow={"md"}
+                        _hover={{ bg: "blue.400" }}
+                        bgColor={"#03A9F4"}
+                        borderBottom={"4px solid #008CCF"}
+                        w={"280px"}
+                        h={"56px"}
+                    >
+                        <Link to="/signup">
+                            <Text fontWeight={400} fontSize={["xs", "md"]}>
+                                CREATE FREE ACCOUNT
+                            </Text>
+                        </Link>
+                    </Button>
+                    <Button
+                        p={0}
+                        colorScheme={"none"}
+                        color={"blue.400"}
+                        _hover={{ textDecoration: "underline" }}>
+                        <Image
+                            src={"https://clockify.me/assets/images/signed-up-icon.svg"}
+                        ></Image>
+                        <Text fontSize={"xs"} ml={"1"}>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                147,262 people signed up last month
+                            </a>
+                        </Text>
+                    </Button>
+                </Flex>
             </div>
         </div>
 
