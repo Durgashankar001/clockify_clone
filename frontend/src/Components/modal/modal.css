@@ -1,0 +1,38 @@
+.container {
+  height: auto;
+  border: 1px solid rgb(17, 255, 183);
+  width: 100%;
+  padding:0 20px;
+}
+
+.flex_direction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex_direction h2 {
+  color: grey;
+}
+
+.flex_direction button {
+  padding: 10px 20px;
+  background-color: #38bdf8;
+  color: #fff;
+}
+
+.flex_direction button:hover{
+  color: black;
+}
+
+.grid_colo{
+  display:grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 10px;
+}
+
+.serach_option {
+
+  border: 2px solid black;
+
+}
