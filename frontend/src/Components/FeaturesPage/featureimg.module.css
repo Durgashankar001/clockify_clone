@@ -63,3 +63,41 @@
        background-color: skyblue;
        color: white;
 }
+.videodiv{
+    height: 40rem;
+    width: 60%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+.videoimg{
+    height: 100%;
+    width: 100%;
+
+}
+.videoh1{
+   
+    font-size: 60px;
+    color: skyblue;
+    margin-left: 20%;
+    /* background-color: skyblue; */
+}
+.h1div{
+    margin: auto;
+    width: 50%;
+
+}
+.tag{
+    color: white;
+    background-color: skyblue;
+    font-size: 20px;
+    width: 30%;
+    position:static;
+    margin-top: -60px;
+    margin-left: 20px;
+}
+.tag:hover{
+    cursor: pointer;
+  color: blue;
+}
