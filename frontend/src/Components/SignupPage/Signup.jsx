@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Spacer, Text } from '@chakra-ui/react'
 import styles from "./signup.module.css"
+import { Link as RouterLink } from "react-router-dom";
 
 const Signup = () => {
   return (
@@ -8,8 +9,10 @@ const Signup = () => {
     #f2f6f8">
         <Box className={styles.outerSignup} bg='whiteAlpha.400' w='75%' h="800px" color='white'>
             <Box className={styles.signupNav} bg='white' w='100%' h="80px" p={5} color='white'>
-                <Image src="https://app.clockify.me/assets/logo.svg" h={35}/>
-                <Text className={styles.links} fontWeight="light" bg='white' textDecoration="none" >Log In</Text>
+                <RouterLink to={"/"}>
+                    <Image src="https://app.clockify.me/assets/logo.svg" h={35}/>
+                </RouterLink>    
+                <RouterLink className={styles.links} fontWeight="light" bg='white' textDecoration="none" to={"/login"}>Log In</RouterLink>
             </Box>
             <Box>
                 <Box mt="40px">
