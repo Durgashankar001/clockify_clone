@@ -1,3 +1,4 @@
+import AllRoutes from './AllRoutes/AllRoutes';
 import './App.css';
 import Footer from './Components/Footer/Footer';
 import HomePage from './Components/HomePage/HomePage';
@@ -9,9 +10,7 @@ import Time_Tracker from './Components/Time_Tracker/Time_Tracker';
 function App() {
   return (
     <div className="App">
-     <Navbar/>
-     <HomePage/>
-     <Footer/>
+     <AllRoutes/>
     </div>
   );
 }
