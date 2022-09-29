@@ -1,0 +1,56 @@
+ListItemt::before{
+    content: "\2022";
+    color: black;
+}
+.download_text{
+    text-align: start;
+}
+@media screen and (max-width: 992px) {
+    .download_app {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .download_icon {
+      width: 150px;
+    }
+    .download_box {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      text-align: center;
+    }
+    .download_img {
+        width: 80%;
+        display: block;
+        margin: auto;
+        
+    }
+    .download_text{
+        text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .download_app {
+      justify-content: center;
+    }
+    .download_box {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      text-align: center;
+    }
+    .download_img {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    .download_icon {
+      width: 120px;
+    }
+    .download_text{
+        text-align: center;
+    }
+  }
