@@ -1,0 +1,65 @@
+.h1{
+    font-weight: bolder;
+    font-size: 30px;
+    margin-left: 30%;
+    margin-bottom: 10px;
+}
+.p{
+    font-weight:lighter;
+    font-size: 20px;
+    margin-left: 10%;
+}
+.timebox{
+    height: 100px;
+    width: 40%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 190px;
+}
+.timeimg{
+    margin: auto;
+    margin-top: -20px;
+}
+.timefooter{
+    height: 100px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.stop{
+    height: 100%;
+    width: 20%;
+
+}
+.tmeh1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.tmeh4{
+    font-size: 18px;
+    font-weight: lighter;
+}
+.appsbuttondiv{
+    height: 50px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid green; */
+}
+.appsbut{
+    /* box-shadow: 1px 1px 1px 1px gray; */
+    background-color: rgba(164, 127, 157, 0.284);
+    width: 10%;
+    border-radius: 10px;
+    /* border: 1px solid gray; */
+    /* font-size: 10px; */
+}
+.appsbut:hover{
+       background-color: skyblue;
+       color: white;
+}
