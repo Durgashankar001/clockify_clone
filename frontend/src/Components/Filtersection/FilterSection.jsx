@@ -13,10 +13,13 @@ import {
   PopoverCloseButton,
   PopoverAnchor,
 } from '@chakra-ui/react';
+import ProjectHead from '../modal/ProjectHead';
+import TableContainethings from '../Table/TableContainethings';
 
 const FilterSection = () => {
   return (
     <>
+      <ProjectHead/>
       <div className="container">
         <table width="50%">
           <tr>
@@ -154,6 +157,8 @@ const FilterSection = () => {
           <button>APPLY FILLTER</button>
         </div>
       </div>
+
+      <TableContainethings/>
     </>
   );
 };

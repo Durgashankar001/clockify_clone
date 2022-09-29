@@ -1,6 +1,6 @@
 .container {
   /* border: 2px solid red; */
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   /* border-radius: 20px; */
   /* background-color: aliceblue; */
   height: 60px;
@@ -9,9 +9,11 @@
   align-items: center;
   /* justify-content:space-around; */
   gap: 10px;
-  margin-left: 10PX;
-  margin-right: 10px;
+  /* margin-left: 10PX;
+  margin-right: 10px; */
   margin-top: 20px;
+  margin-bottom: 50px;
+  
 }
 
 .container select {
