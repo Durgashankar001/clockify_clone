@@ -36,7 +36,7 @@ function StopWatch() {
     const handleReset = () => {
       setIsActive(false);
       setTime(0);
-      console.log("time:",(time/1000)/60)
+      console.log("time:",(time/1000))
     };
     
     return (
