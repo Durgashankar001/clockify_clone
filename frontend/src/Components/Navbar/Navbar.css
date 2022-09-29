@@ -1,6 +1,9 @@
 .navbar_text{
     text-transform: uppercase;
 }
+.navbar_text:hover{
+    color: #03a9f4;
+}
 .navbar_flex{
     align-items: center;
     justify-content: space-between;
