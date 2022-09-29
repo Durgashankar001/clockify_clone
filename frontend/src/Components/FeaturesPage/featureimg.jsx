@@ -177,7 +177,8 @@ export const Featureimg=()=>{
             {/* Reports */}
             <div>
           <div className={ImgStyle.timebox}>
-              <h1 className={ImgStyle.h1}>Reports</h1>
+
+               <h1 className={ImgStyle.h1}>Reports</h1>
               <h3 className={ImgStyle.p}>See who worked on what, how much money you earn, review your team's time, and export the data.</h3>
           </div>
           
