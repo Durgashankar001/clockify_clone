@@ -6,9 +6,9 @@ export const Featureimg=()=>{
     return(
         <>
         <div>
-          <div className={ImgStyle.timebox}>
-              <h1 className={ImgStyle.h1}>Time Tracker</h1>
-              <h3 className={ImgStyle.p}>Start and stop timer as you work, or enter hours manually.</h3>
+           <div className={ImgStyle.timebox}>
+               <h1 className={ImgStyle.h1}>Time Tracker</h1>
+               <h3 className={ImgStyle.p}>Start and stop timer as you work, or enter hours manually.</h3>
           </div>
           
                 <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-tracker-screenshot.svg" alt="Time tracker" />
