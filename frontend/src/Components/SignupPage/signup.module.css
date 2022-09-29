@@ -1,0 +1,9 @@
+.outerSignup{
+    margin: auto;
+}
+.signupNav{
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+}
