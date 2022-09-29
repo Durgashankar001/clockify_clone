@@ -66,7 +66,10 @@
   }
 
   .btn-two{
-    background-color: #03a9f4;
+    background-color: red;
+  }
+  .full{
+    width: 100%;
   }
   .st{
     display: flex;
@@ -94,6 +97,70 @@
     width: 400px;
     height: 40px;
     /* margin-top: 60px; */
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+
+  }
+  .in12{
+    /* border: 1px solid gray; */
+    width: 300px;
+    height: 40px;
+    /* margin-top: 60px; */
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+
+  }
+  .btnadd{
+    background-color: #03a9f4;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+color: white;
+height: 40px;
+width: 100px;
+  }
+  .addinput{
+    color: black;
+    font-size: 20px;
+    width: 100px;
+    justify-content: center;
+    /* margin-right: -100px; */
+  }
+.in22{
+    width: 50px;
+   font-size: 20px;
+}
+  .bluep{
+    color: #03a9f4;
+    display: flex;
+  }
+
+  .pin{
+    margin-top: -5px;
+  }
+  .bunicon{
+    display: grid;
+    gap: 10px;
+  }
+  .bluep1{
+    display: flex;
+    color: rgb(187, 184, 184);
+    align-items: center;
+  
+  }
+  .hicon{
+width: 30px;
+  }
+  .wname{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .wname1{
+    border: 1px solid gray;
+    padding: 5px;
+    background-color: rgb(211, 209, 209);
+  }
+  .Today{
+    display: flex;
+  }
+  .h1{
     font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
 
   }
