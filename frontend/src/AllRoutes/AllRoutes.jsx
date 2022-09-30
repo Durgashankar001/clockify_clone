@@ -11,20 +11,24 @@ import Signup from '../Components/SignupPage/Signup'
 import Time_Tracker from '../Components/Time_Tracker/Time_Tracker'
 import Login from '../Components/LoginPage/Login'
 import AddPage from '../Components/Time_Tracker/AddPage'
+import Clientsection from '../Components/AddClients/Clientsection'
 
 const AllRoutes = () => {
 
   return (
     <>
-     <Routes>
-        <Route path='/' element={
+      <Routes>
+        <Route
+          path="/"
+          element={
             <>
-            <Navbar/>
-            <HomePage/>
-            <Footer/>
+              <Navbar />
+              <HomePage />
+              <Footer />
             </>
-        }></Route>
-         <Route
+          }
+        ></Route>
+        <Route
           path="/features"
           element={
             <>
@@ -34,7 +38,7 @@ const AllRoutes = () => {
             </>
           }
         ></Route>
-         <Route
+        <Route
           path="/download"
           element={
             <>
@@ -50,9 +54,10 @@ const AllRoutes = () => {
         <Route path="/tracker" element={<Time_Tracker />}></Route>
         <Route path="/project" element={<FilterSection />}></Route>
         <Route path="/taskAdd" element={<AddPage />}></Route>
-     </Routes>
+        <Route path="/client" element={<Clientsection />}></Route>
+      </Routes>
     </>
-  )
+  );
 }
 
 export default AllRoutes
