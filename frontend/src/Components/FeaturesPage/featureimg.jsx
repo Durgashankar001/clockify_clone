@@ -1,7 +1,10 @@
+import { useState } from "react"
 import ImgStyle from "./featureimg.module.css"
 
 export const Featureimg=()=>{
-
+      const [value,setValue]=useState(false)
+      const [value2,setValue2]=useState(false)
+      const [value3,setValue3]=useState(false)
 
     return(
         <>
@@ -180,8 +183,13 @@ export const Featureimg=()=>{
               <h1 className={ImgStyle.h1}>Reports</h1>
               <h3 className={ImgStyle.p}>See who worked on what, how much money you earn, review your team's time, and export the data.</h3>
           </div>
+          <div className={ImgStyle.picbutton}>
+            <div  className={ImgStyle.button1} onClick={()=>setValue3(!value3)}>SUMMARY</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue3(!value3)}>DETAILED</div>
+          </div>
+           {value3 ?  <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-reports-screenshot.svg" alt="Dashboard" /> : <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-detailed-screenshot.svg" alt="Dashboard" />}
           
-                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-reports-screenshot.svg" alt="Dashboard" />
+               
           
             <div className={ImgStyle.timefooter}>
                   <div className={ImgStyle.stop}>
@@ -210,8 +218,13 @@ export const Featureimg=()=>{
               <h1 className={ImgStyle.h1}>Activity</h1>
               <h3 className={ImgStyle.p}>See visited sites and what you've worked on.</h3>
           </div>
+          <div className={ImgStyle.picbutton}>
+            <div  className={ImgStyle.button1} onClick={()=>setValue2(!value2)}>LOCATIONS</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue2(!value2)}>SCREENSHOTS</div>
+          </div>
           
-                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-locations-screenshot.png" alt="Loaction" />
+          {value2 ?  <img  className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-locations-screenshot.png" alt="Loaction" /> : <img   className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-screenshots-screenshot.png" alt="Loaction" />}
+               
           
             <div className={ImgStyle.timefooter}>
                   <div className={ImgStyle.stop}>
@@ -266,7 +279,7 @@ export const Featureimg=()=>{
 
 
 {/* Team */}
-<div>
+      <div>
           <div className={ImgStyle.timebox}>
               <h1 className={ImgStyle.h1}>Team</h1>
               <h3 className={ImgStyle.p}>Invite your team to track time in your account..</h3>
@@ -294,6 +307,166 @@ export const Featureimg=()=>{
             </div>
          </div>
 
+         {/* Scheduling */}
+         <div>
+          <div className={ImgStyle.timebox}>
+              <h1 className={ImgStyle.h1}>Scheduling</h1>
+              <h3 className={ImgStyle.p}>Plan projects and visualize team's capacity.</h3>
+          </div>
+          <div className={ImgStyle.picbutton}>
+             <div className={ImgStyle.button1} onClick={()=>setValue(!value)}>PROJECTS</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue(!value)}>TEAM</div>
+          </div>
+          {value ? <img  className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-scheduling-projects-screenshot.svg" alt="tream" /> : <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-scheduling-team-screenshot.svg" alt="tream" />}
+                
+          
+            <div className={ImgStyle.timefooter}>
+                  <div className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Milestones</h1>
+                        <h3 className={ImgStyle.tmeh4}>Visualize projects.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Assignments</h1>
+                        <h3 className={ImgStyle.tmeh4}>Decide who works.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Capacity</h1>
+                        <h3 className={ImgStyle.tmeh4}> take on more work.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1} >Publish</h1>
+                        <h3 className={ImgStyle.tmeh4}>Let others see .</h3>
+                  </div>
+            </div>
+         </div>
+
+         {/* TIME OFF  */}
+         <div>
+          <div className={ImgStyle.timebox}>
+              <h1 className={ImgStyle.h1}>Time off</h1>
+              <h3 className={ImgStyle.p}>Track your team's holidays and time off requests.</h3>
+          </div>
+          
+                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-timeoff-screenshot.svg" alt="tream" />
+          
+            <div className={ImgStyle.timefooter}>
+                  <div className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Policies</h1>
+                        <h3 className={ImgStyle.tmeh4}>Visualize projects.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Holidays</h1>
+                        <h3 className={ImgStyle.tmeh4}>Define holidays.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Requests</h1>
+                        <h3 className={ImgStyle.tmeh4}> Request and approve.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1} >Balance</h1>
+                        <h3 className={ImgStyle.tmeh4}>Let others see .</h3>
+                  </div>
+            </div>
+         </div>
+
+
+        {/* Approval */}
+        <div>
+          <div className={ImgStyle.timebox}>
+              <h1 className={ImgStyle.h1}>Approval</h1>
+              <h3 className={ImgStyle.p}>Officially approve your team's timesheets and expenses.</h3>
+          </div>
+          
+                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-approval-screenshot.svg" alt="tream" />
+          
+            <div className={ImgStyle.timefooter}>
+                  <div className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Submit</h1>
+                        <h3 className={ImgStyle.tmeh4}>Submit timesheets.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Reminders</h1>
+                        <h3 className={ImgStyle.tmeh4}>Send late timesheet.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Immutable</h1>
+                        <h3 className={ImgStyle.tmeh4}> Prevent further changes.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1} >History</h1>
+                        <h3 className={ImgStyle.tmeh4}>See all requests.</h3>
+                  </div>
+            </div>
+         </div>
+
+
+        {/* EXpenses */}
+        <div>
+          <div className={ImgStyle.timebox}>
+              <h1 className={ImgStyle.h1}>Expenses</h1>
+              <h3 className={ImgStyle.p}>Record fixed-fees and other project expenses.</h3>
+          </div>
+          
+                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-expenses-screenshot.svg" alt="tream" />
+          
+            <div className={ImgStyle.timefooter}>
+                  <div className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Track</h1>
+                        <h3 className={ImgStyle.tmeh4}>Record by sum .</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Types</h1>
+                        <h3 className={ImgStyle.tmeh4}>Define expense.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Receipts</h1>
+                        <h3 className={ImgStyle.tmeh4}> Attach expense receipts.</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1} >Report</h1>
+                        <h3 className={ImgStyle.tmeh4}>Analyze .</h3>
+                  </div>
+            </div>
+         </div>
+     
+
+     {/* INvoicing */}
+     <div>
+          <div className={ImgStyle.timebox}>
+              <h1 className={ImgStyle.h1}>Invoicing</h1>
+              <h3 className={ImgStyle.p}>Issue invoices based on tracked time, expenses, and hourly rates.</h3>
+          </div>
+          
+                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-invoicing-screenshot.svg" alt="tream" />
+          
+            <div className={ImgStyle.timefooter}>
+                  <div className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Create</h1>
+                        <h3 className={ImgStyle.tmeh4}>Import time </h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>PDF</h1>
+                        <h3 className={ImgStyle.tmeh4}>Download </h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1}>Customize</h1>
+                        <h3 className={ImgStyle.tmeh4}> Add company</h3>
+                  </div>
+                  <div  className={ImgStyle.stop}>
+                        <h1  className={ImgStyle.tmeh1} >Report</h1>
+                        <h3 className={ImgStyle.tmeh4}>Analyze .</h3>
+                  </div>
+            </div>
+         </div>
+     
+
+     {/* WAtch demo */}
+         <div  className={ImgStyle.h1div}><h1 className={ImgStyle.videoh1}>Watch demo (12:35)</h1></div>  
+       <div className={ImgStyle.videodiv}>
+            <img className={ImgStyle.videoimg} src="https://i.ytimg.com/vi/NMZhFs_b0Aw/default.jpg" alt="img" />
+                  <a href="https://www.youtube.com/watch?v=NMZhFs_b0Aw"><h1 className={ImgStyle.tag}>Watch on Youtube</h1></a>
+       </div>
+          
         </>
     )
 }
