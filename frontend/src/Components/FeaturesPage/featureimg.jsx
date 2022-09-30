@@ -4,6 +4,7 @@ import ImgStyle from "./featureimg.module.css"
 export const Featureimg=()=>{
       const [value,setValue]=useState(false)
       const [value2,setValue2]=useState(false)
+      const [value3,setValue3]=useState(false)
 
     return(
         <>
@@ -182,8 +183,13 @@ export const Featureimg=()=>{
               <h1 className={ImgStyle.h1}>Reports</h1>
               <h3 className={ImgStyle.p}>See who worked on what, how much money you earn, review your team's time, and export the data.</h3>
           </div>
+          <div className={ImgStyle.picbutton}>
+            <div  className={ImgStyle.button1} onClick={()=>setValue3(!value3)}>SUMMARY</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue3(!value3)}>DETAILED</div>
+          </div>
+           {value3 ?  <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-reports-screenshot.svg" alt="Dashboard" /> : <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-detailed-screenshot.svg" alt="Dashboard" />}
           
-                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-reports-screenshot.svg" alt="Dashboard" />
+               
           
             <div className={ImgStyle.timefooter}>
                   <div className={ImgStyle.stop}>
@@ -213,8 +219,8 @@ export const Featureimg=()=>{
               <h3 className={ImgStyle.p}>See visited sites and what you've worked on.</h3>
           </div>
           <div className={ImgStyle.picbutton}>
-            <div  className={ImgStyle.button1} onClick={()=>setValue2(!value2)}>PROJECTS</div>
-             <div className={ImgStyle.button1}  onClick={()=>setValue2(!value2)}>TEAM</div>
+            <div  className={ImgStyle.button1} onClick={()=>setValue2(!value2)}>LOCATIONS</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue2(!value2)}>SCREENSHOTS</div>
           </div>
           
           {value2 ?  <img  className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-locations-screenshot.png" alt="Loaction" /> : <img   className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-screenshots-screenshot.png" alt="Loaction" />}
