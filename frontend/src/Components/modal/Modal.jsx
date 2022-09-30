@@ -97,8 +97,8 @@ export default function BasicUsage() {
 
               <Checkbox defaultChecked>Public</Checkbox>
               <Select placeholder="No Template">
-                <option value="option1">search</option>
-                <option value="option2">Option 2</option>
+                <option value="option1">No template</option>
+                {/* <option value="option2">Option 2</option> */}
               </Select>
             </div>
           </ModalBody>

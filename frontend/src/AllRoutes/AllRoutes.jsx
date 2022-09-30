@@ -12,6 +12,7 @@ import Time_Tracker from '../Components/Time_Tracker/Time_Tracker'
 import Login from '../Components/LoginPage/Login'
 import AddPage from '../Components/Time_Tracker/AddPage'
 import Clientsection from '../Components/AddClients/Clientsection'
+import Tagsection from '../Components/Tags/Tagsection'
 
 const AllRoutes = () => {
 
@@ -55,6 +56,7 @@ const AllRoutes = () => {
         <Route path="/project" element={<FilterSection />}></Route>
         <Route path="/taskAdd" element={<AddPage />}></Route>
         <Route path="/client" element={<Clientsection />}></Route>
+        <Route path="/tags" element={<Tagsection />}></Route>
       </Routes>
     </>
   );

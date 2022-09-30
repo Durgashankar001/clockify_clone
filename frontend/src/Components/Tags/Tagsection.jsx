@@ -8,7 +8,39 @@ import {
   Text,
 } from '@chakra-ui/react';
 
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const getData = async () => {
+  let res = await axios.get('http://localhost:8080/tag');
+
+  return res.data;
+};
+
 function Tagsection() {
+  const [client, setClient] = useState('');
+  const [Allclient, setAllclient] = useState([]);
+
+  console.log(Allclient);
+
+  useEffect(() => {
+    getData().then((res) => {
+      setAllclient(res);
+    });
+  }, []);
+
+  console.log(client);
+
+  const handalAdd = async () => {
+    await axios.post('http://localhost:8080/tag/new', {
+      name: client,
+    });
+
+    getData().then((res) => {
+      setAllclient(res);
+    });
+  };
+
   return (
     <div style={{ padding: '20px' }}>
       <Text fontSize="xl" mb={30} px="4" py="4">
@@ -31,22 +63,26 @@ function Tagsection() {
         </div>
         <div>
           <Input
+            onChange={(e) => setClient(e.target.value)}
             placeholder="Add new tag"
             htmlSize={12}
             width="150px"
             mr="15px"
           />
-          <Button colorScheme="blue" px="10" py="10px">
+          <Button colorScheme="blue" px="10" py="10px" onClick={handalAdd}>
             Add
           </Button>
         </div>
       </Flex>
 
-      <Box bg="aliceblue" h="30" w="100%" color="grey" mt={30}>
-        <Text fontSize="md" px="3">
-          Projects
-        </Text>
-      </Box>
+      {Allclient &&
+        Allclient.map((ele) => (
+          <Box bg="aliceblue" h="30" w="100%" color="grey" mt={30}>
+            <Text fontSize="md" px="3">
+              {ele.name}
+            </Text>
+          </Box>
+        ))}
     </div>
   );
 }
