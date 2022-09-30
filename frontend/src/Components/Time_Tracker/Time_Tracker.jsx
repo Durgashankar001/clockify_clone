@@ -5,6 +5,7 @@ import "./Timer.css";
 import { FaPlusCircle,FaStopwatch,FaCommentDots,FaDollarSign,FaTags,FaGripLinesVertical } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import SideBar from './SideBar/SideBar';
 
 
 const Time_Tracker = () => {
@@ -23,7 +24,7 @@ const Time_Tracker = () => {
       <Box><Navbar/></Box>
       <Box className='timePage'>
         <Box className='st01'>
-<h1>Sidebar</h1>
+<SideBar/>
         </Box>
         <Box className='full'>
         <Box className='st'>

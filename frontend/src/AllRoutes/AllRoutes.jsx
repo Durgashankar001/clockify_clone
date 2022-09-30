@@ -8,6 +8,9 @@ import Footer from '../Components/Footer/Footer'
 import HomePage from '../Components/HomePage/HomePage'
 import Navbar from '../Components/Navbar/Navbar'
 import Signup from '../Components/SignupPage/Signup'
+import AddPage from '../Components/Time_Tracker/AddPage'
+import SideBar from '../Components/Time_Tracker/SideBar/SideBar'
+// import SideBar from '../Components/Time_Tracker/SideBar'
 import Time_Tracker from '../Components/Time_Tracker/Time_Tracker'
 
 const AllRoutes = () => {
@@ -43,9 +46,11 @@ const AllRoutes = () => {
           }
         ></Route>
         <Route path="/signup" element={<Signup />}></Route>
-        <Route path="/tracker" element={<Time_Tracker/>}></Route>
-        <Route path="/features" element={<Features/>}></Route>
-        <Route path="/project" element={<FilterSection/>}></Route>
+        <Route path="/features" element={<Features />}></Route>
+        <Route path="/tracker" element={<Time_Tracker />}></Route>
+        <Route path="/project" element={<FilterSection />}></Route>
+        <Route path="/sidebar" element={<SideBar/>}></Route>
+        <Route path="/taskadd" element={<AddPage/>}></Route>
      </Routes>
     </>
   )
