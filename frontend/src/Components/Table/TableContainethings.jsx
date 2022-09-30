@@ -26,7 +26,29 @@ import {
   Text,
 } from '@chakra-ui/react';
 
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+// import './modal.css'
+
+const getData = async () => {
+  let res = await axios.get('http://localhost:8080/project');
+
+  return res.data;
+};
+
 const TableContainethings = () => {
+
+    const [Allclient, setAllclient] = useState([]);
+
+    console.log(Allclient);
+
+    useEffect(() => {
+      getData().then((res) => {
+        setAllclient(res);
+      });
+    }, []);
+
   return (
     <>
       <Box bg="aliceblue" h="30" w="100%" color="grey">
@@ -49,34 +71,37 @@ const TableContainethings = () => {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
-              <Checkbox mt={8} px={5}></Checkbox> <Td>Name</Td>
-              <Td>-</Td>
-              <Td>0.00h</Td>
-              <Td>0.00 USD</Td>
-              <Td>public</Td>
-              <Td>
-                <AiOutlineStar
-                  style={{ fontSize: '20px', marginLeft: '18px' }}
-                />
-              </Td>
-              <Td>
-                <Popover>
-                  <PopoverTrigger>
-                    <Button>
-                      <BsThreeDotsVertical />
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent>
-                    <PopoverArrow />
-                    <PopoverCloseButton />
-                    <PopoverHeader>select</PopoverHeader>
-                    <PopoverBody>Set as Template</PopoverBody>
-                    <PopoverBody>Archive</PopoverBody>
-                  </PopoverContent>
-                </Popover>
-              </Td>
-            </Tr>
+            {Allclient &&
+              Allclient.map((ele) => (
+                <Tr>
+                  <Checkbox mt={8} px={5}></Checkbox> <Td>{ele.name}</Td>
+                  <Td>{ele.useremail}</Td>
+                  <Td>0.00h</Td>
+                  <Td>0.00 USD</Td>
+                  <Td>public</Td>
+                  <Td>
+                    <AiOutlineStar
+                      style={{ fontSize: '20px', marginLeft: '18px' }}
+                    />
+                  </Td>
+                  <Td>
+                    <Popover>
+                      <PopoverTrigger>
+                        <Button>
+                          <BsThreeDotsVertical />
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent>
+                        <PopoverArrow />
+                        <PopoverCloseButton />
+                        <PopoverHeader>select</PopoverHeader>
+                        <PopoverBody>Set as Template</PopoverBody>
+                        <PopoverBody>Archive</PopoverBody>
+                      </PopoverContent>
+                    </Popover>
+                  </Td>
+                </Tr>
+              ))}
           </Tbody>
         </Table>
       </TableContainer>
