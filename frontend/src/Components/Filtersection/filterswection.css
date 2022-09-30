@@ -36,10 +36,12 @@
 }
 
 .button_apply button {
-  padding: 7px 20px;
+  padding: 1px 20px;
+  margin-right: 30px;
   color: blue;
   background-color: #fff;
   border: 1px solid blue;
+  
 }
 
 .button_apply button:hover {
@@ -62,5 +64,7 @@
   border: 2px solid red;
   background-color: rgb(232, 11, 11);
 } */
+
+
 
 

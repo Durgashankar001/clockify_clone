@@ -39,7 +39,7 @@ export default function BasicUsage() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Create new project</ModalHeader>
+          <ModalHeader >Create new project</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <div className="grid_colo">
@@ -59,7 +59,7 @@ export default function BasicUsage() {
 
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Cancle
+              Cancel
             </Button>
             <Button variant="ghost" colorScheme="teal">
               CREATE
