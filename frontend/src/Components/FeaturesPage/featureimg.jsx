@@ -1,7 +1,9 @@
+import { useState } from "react"
 import ImgStyle from "./featureimg.module.css"
 
 export const Featureimg=()=>{
-
+      const [value,setValue]=useState(false)
+      const [value2,setValue2]=useState(false)
 
     return(
         <>
@@ -210,8 +212,13 @@ export const Featureimg=()=>{
               <h1 className={ImgStyle.h1}>Activity</h1>
               <h3 className={ImgStyle.p}>See visited sites and what you've worked on.</h3>
           </div>
+          <div className={ImgStyle.picbutton}>
+            <div  className={ImgStyle.button1} onClick={()=>setValue2(!value2)}>PROJECTS</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue2(!value2)}>TEAM</div>
+          </div>
           
-                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-locations-screenshot.png" alt="Loaction" />
+          {value2 ?  <img  className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-locations-screenshot.png" alt="Loaction" /> : <img   className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-screenshots-screenshot.png" alt="Loaction" />}
+               
           
             <div className={ImgStyle.timefooter}>
                   <div className={ImgStyle.stop}>
@@ -300,8 +307,12 @@ export const Featureimg=()=>{
               <h1 className={ImgStyle.h1}>Scheduling</h1>
               <h3 className={ImgStyle.p}>Plan projects and visualize team's capacity.</h3>
           </div>
-          
-                <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-scheduling-projects-screenshot.svg" alt="tream" />
+          <div className={ImgStyle.picbutton}>
+             <div className={ImgStyle.button1} onClick={()=>setValue(!value)}>PROJECTS</div>
+             <div className={ImgStyle.button1}  onClick={()=>setValue(!value)}>TEAM</div>
+          </div>
+          {value ? <img  className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-scheduling-projects-screenshot.svg" alt="tream" /> : <img className={ImgStyle.timeimg} src="https://clockify.me/assets/images/features/features-scheduling-team-screenshot.svg" alt="tream" />}
+                
           
             <div className={ImgStyle.timefooter}>
                   <div className={ImgStyle.stop}>

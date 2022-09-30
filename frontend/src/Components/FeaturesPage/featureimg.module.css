@@ -101,3 +101,23 @@
     cursor: pointer;
   color: blue;
 }
+.picbutton{
+    height: 100px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+   /* border: 1px solid red; */
+   margin: auto;
+   box-shadow: 0px 1px 0px 0px gray;
+}
+.button1{
+    margin-top: 30px;
+    font-size: 30px;
+    color: gray;
+    box-shadow: 0px 1px 0px 0px gray;
+}
+.button1:hover{
+    cursor: pointer;
+    color: blue;
+    box-shadow: 0px 1px 0px 0px blue;
+}
