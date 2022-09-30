@@ -10,6 +10,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import Signup from '../Components/SignupPage/Signup'
 import Time_Tracker from '../Components/Time_Tracker/Time_Tracker'
 import Login from '../Components/LoginPage/Login'
+import AddPage from '../Components/Time_Tracker/AddPage'
 
 const AllRoutes = () => {
 
@@ -48,6 +49,7 @@ const AllRoutes = () => {
         <Route path="/features" element={<Features />}></Route>
         <Route path="/tracker" element={<Time_Tracker />}></Route>
         <Route path="/project" element={<FilterSection />}></Route>
+        <Route path="/taskadd" element={<AddPage/>}></Route>
      </Routes>
     </>
   )
