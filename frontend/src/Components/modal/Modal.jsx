@@ -23,7 +23,7 @@ import {
   PopoverArrow,
   PopoverCloseButton,
   PopoverAnchor,
-  Portal
+  Portal,
 } from '@chakra-ui/react';
 
 import { useEffect, useState } from 'react';
@@ -33,39 +33,29 @@ import { getData2 } from '../Table/TableContainethings';
 // import './modal.css'
 
 const getData = async () => {
-  let res = await axios.get('http://localhost:8080/client');
+  let res = await axios.get('https://legit-dust-8169.herokuapp.com/client');
 
   return res.data;
 };
 
-
-
-
 export default function BasicUsage() {
-
-
-
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [Allclient, setAllclient] = useState([]);
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [client, setClient] = useState('');
 
-  console.log(name)
+  console.log(name);
   console.log(client);
 
   const handalAdd = async () => {
-    await axios.post('http://localhost:8080/project/new', {
+    await axios.post('https://legit-dust-8169.herokuapp.com/project/new', {
       name: name,
       tag: 'active',
       billable: false,
-      useremail: client || "no client"
+      useremail: client || 'no client',
     });
-    onClose()
-   
-  }
-
-
-
+    onClose();
+  };
 
   useEffect(() => {
     getData().then((res) => {
@@ -89,7 +79,10 @@ export default function BasicUsage() {
                 placeholder="Basic usage"
                 onChange={(e) => setName(e.target.value)}
               />
-              <Select onChange={(e) => setClient(e.target.value)} placeholder="Select Client">
+              <Select
+                onChange={(e) => setClient(e.target.value)}
+                placeholder="Select Client"
+              >
                 {Allclient &&
                   Allclient.map((ele) => (
                     <option value={ele.name}>{ele.name}</option>

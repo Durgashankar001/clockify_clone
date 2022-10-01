@@ -32,7 +32,7 @@ import axios from 'axios';
 // import './modal.css'
 
 export const getData2 = async () => {
-  let res = await axios.get('http://localhost:8080/project');
+  let res = await axios.get('https://legit-dust-8169.herokuapp.com/project');
 
   return res.data;
 };
@@ -51,7 +51,9 @@ const TableContainethings = () => {
 
     const handleDelete = async (id) =>{
       console.log(id)
-      let res = await axios.delete(`http://localhost:8080/project/${id}`);
+      let res = await axios.delete(
+        `https://legit-dust-8169.herokuapp.com/project/${id}`
+      );
       getData2().then((res) => {
         setAllclient(res)
       });

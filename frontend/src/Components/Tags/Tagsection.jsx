@@ -15,7 +15,7 @@ import Navbar from '../Navbar/Navbar';
 import Inner_Navbar from '../Time_Tracker/SideBar/Inner_Navbar';
 
 const getData = async () => {
-  let res = await axios.get('http://localhost:8080/tag');
+  let res = await axios.get('https://legit-dust-8169.herokuapp.com/tag');
 
   return res.data;
 };
@@ -23,6 +23,7 @@ const getData = async () => {
 function Tagsection() {
   const [client, setClient] = useState('');
   const [Allclient, setAllclient] = useState([]);
+  const [search, setSearch] = useState('');
 
   console.log(Allclient);
 
@@ -35,7 +36,7 @@ function Tagsection() {
   console.log(client);
 
   const handalAdd = async () => {
-    await axios.post('http://localhost:8080/tag/new', {
+    await axios.post('https://legit-dust-8169.herokuapp.com/tag/new', {
       name: client,
     });
 
@@ -76,6 +77,9 @@ function Tagsection() {
                   htmlSize={8}
                   width="150px"
                   mr={600}
+                  onChange={(event) => {
+                    setSearch(event.target.value);
+                  }}
                 />
               </div>
               <div>
@@ -98,7 +102,15 @@ function Tagsection() {
             </Flex>
 
             {Allclient &&
-              Allclient.map((ele) => (
+              Allclient.filter((ele) => {
+                if (search === '') {
+                  return ele;
+                } else if (
+                  ele.name.toLowerCase().includes(search.toLowerCase())
+                ) {
+                  return ele;
+                }
+              }).map((ele) => (
                 <Box bg="aliceblue" h="30" w="100%" color="grey" mt={30}>
                   <Text fontSize="md" px="3">
                     {ele.name}

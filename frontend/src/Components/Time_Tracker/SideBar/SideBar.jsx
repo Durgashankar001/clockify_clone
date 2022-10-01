@@ -27,7 +27,7 @@ const SideBar = () => {
 <Box className='boxside'><div className='divside'><FaCalculator className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>kiosks</h1></div></Box>
 
      
-     </Box>
+ </Box>
     </div>
   )
 }
