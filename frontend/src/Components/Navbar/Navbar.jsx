@@ -16,6 +16,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as RouterLink } from "react-router-dom";
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const links = ["features", "download"]
 
@@ -37,6 +38,7 @@ const Links = ({ children }) => (
 
 
 const Navbar = () => {
+    const token = useSelector((store)=> store.auth.data.token) 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [user, setUser] = useState(false)
     return (
@@ -76,10 +78,10 @@ const Navbar = () => {
                             size={["xs", "sm"]}
                             mr={4}
                         >
-                            {!user ? (
-                                <RouterLink to={"/login"}>LOG IN</RouterLink>
+                            {token ?  (
+                                <RouterLink to={"/login"}>LOG OUT</RouterLink>
                             ) : (
-                                <Text>{user}</Text>
+                                <Text>LOG IN</Text>
                             )}
                         </Button>
                         <Button

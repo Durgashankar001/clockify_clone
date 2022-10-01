@@ -13,6 +13,7 @@ import Login from '../Components/LoginPage/Login'
 import AddPage from '../Components/Time_Tracker/AddPage'
 import Clientsection from '../Components/AddClients/Clientsection'
 import Tagsection from '../Components/Tags/Tagsection'
+import RequiredAuth from "../hoc/RequiredAuth"
 
 const AllRoutes = () => {
 
@@ -52,11 +53,11 @@ const AllRoutes = () => {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/features" element={<Features />}></Route>
-        <Route path="/tracker" element={<Time_Tracker />}></Route>
-        <Route path="/project" element={<FilterSection />}></Route>
-        <Route path="/taskAdd" element={<AddPage />}></Route>
-        <Route path="/client" element={<Clientsection />}></Route>
-        <Route path="/tags" element={<Tagsection />}></Route>
+        <Route path="/tracker" element={<RequiredAuth><Time_Tracker /></RequiredAuth>}></Route>
+        <Route path="/project" element={<RequiredAuth><FilterSection /></RequiredAuth>}></Route>
+        <Route path="/taskAdd" element={<RequiredAuth><AddPage /></RequiredAuth>}></Route>
+        <Route path="/client" element={<RequiredAuth><Clientsection /></RequiredAuth>}></Route>
+        <Route path="/tags" element={<RequiredAuth><Tagsection /></RequiredAuth>}></Route>
       </Routes>
     </>
   );

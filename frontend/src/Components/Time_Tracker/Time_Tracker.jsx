@@ -15,7 +15,13 @@ import { HiDotsVertical } from "react-icons/hi";
 
 const Time_Tracker = () => {
   const navigate=useNavigate();
+  const [name,setName]=useState("")
 
+  const handlename=()=>{
+    setName()
+  }
+
+  // console.log("timename:",name)
   function tracker(){
     navigate("/tracker")
   }
@@ -28,7 +34,8 @@ const Time_Tracker = () => {
 
 
   const getData = async () => {
-    let res = await axios.get('http://localhost:8080/task');
+    let res = await axios.get('https://legit-dust-8169.herokuapp.com/task');
+    // https://legit-dust-8169.herokuapp.com/task
   
     return res.data;
   };
@@ -39,7 +46,15 @@ const Time_Tracker = () => {
       setData(res);
   
     });
-  },[])
+  },[getData()])
+
+  //delete
+const handaledelete=(id)=>{
+  axios.delete(`https://legit-dust-8169.herokuapp.com/task/delete/${id}`)
+  .then(()=>{console.log(id)})
+  // console.log("id",id)
+}
+ 
 
   return (
     <div >
@@ -51,11 +66,11 @@ const Time_Tracker = () => {
         <Box className='full'>
         <Box className='st'>
             <div>
-                <input type="text" className='in1' placeholder='What are you working on?' />
+                <input type="text" onChange={handlename} className='in1' placeholder='What are you working on?' />
             </div>
             <div className='bluep'><FaPlusCircle/><a href="" className='pin'>Project</a></div>
             <div className='bluep1'><FaGripLinesVertical className='hicon'/><FaTags className='hicon'/><FaGripLinesVertical className='hicon'/><FaDollarSign className='hicon'/><FaGripLinesVertical className='hicon'/></div>
-            <div className='st2'> <StopWatch/></div>
+            <div className='st2'> <StopWatch name={name}/></div>
             <div className='bunicon'><button onClick={tracker}><FaStopwatch/></button>
             <button onClick={taskadd}><FaCommentDots/></button></div>
            
@@ -100,7 +115,7 @@ const Time_Tracker = () => {
            <button><GrPlay/></button>
           </div>
 
-          <div className="A7"><button><HiDotsVertical/></button></div>
+          <div className="A7"><button onClick={() => handaledelete(e._id)}><HiDotsVertical/></button></div>
         
         </Box>
         ))
