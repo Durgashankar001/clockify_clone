@@ -26,10 +26,52 @@ import {
   Portal
 } from '@chakra-ui/react';
 
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { getData2 } from '../Table/TableContainethings';
+
 // import './modal.css'
 
+const getData = async () => {
+  let res = await axios.get('http://localhost:8080/client');
+
+  return res.data;
+};
+
+
+
+
 export default function BasicUsage() {
+
+
+
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [Allclient, setAllclient] = useState([]);
+  const [name, setName] = useState("");
+  const [client, setClient] = useState('');
+
+  console.log(name)
+  console.log(client);
+
+  const handalAdd = async () => {
+    await axios.post('http://localhost:8080/project/new', {
+      name: name,
+      tag: 'active',
+      billable: false,
+      useremail: client || "no client"
+    });
+    onClose()
+   
+  }
+
+
+
+
+  useEffect(() => {
+    getData().then((res) => {
+      setAllclient(res);
+    });
+  }, []);
   return (
     <>
       <Button onClick={onOpen} colorScheme="blue">
@@ -43,25 +85,30 @@ export default function BasicUsage() {
           <ModalCloseButton />
           <ModalBody>
             <div className="grid_colo">
-              <Input placeholder="Basic usage" />
-              <Select placeholder="Select Client">
-                <option value="option1"></option>
-                <option value="option2">Option 2</option>
+              <Input
+                placeholder="Basic usage"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Select onChange={(e) => setClient(e.target.value)} placeholder="Select Client">
+                {Allclient &&
+                  Allclient.map((ele) => (
+                    <option value={ele.name}>{ele.name}</option>
+                  ))}
               </Select>
 
               <Checkbox defaultChecked>Public</Checkbox>
               <Select placeholder="No Template">
-                <option value="option1">search</option>
-                <option value="option2">Option 2</option>
+                <option value="option1">No template</option>
+                {/* <option value="option2">Option 2</option> */}
               </Select>
             </div>
           </ModalBody>
 
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Cancle
+              Cancel
             </Button>
-            <Button variant="ghost" colorScheme="teal">
+            <Button variant="ghost" colorScheme="teal" onClick={handalAdd}>
               CREATE
             </Button>
           </ModalFooter>

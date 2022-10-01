@@ -1,9 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Spacer, Text } from '@chakra-ui/react'
 import styles from "./signup.module.css"
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
+import { signupAPI } from '../../store/auth/auth.actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Signup = () => {
+
+    const isAuth = useSelector((store)=> store.auth.data.isAuthenticated)
+    
+    const navigate = useNavigate();
+    // const { state } = useLocation();
+    const [loginCreds, setLoginCreds] = useState({});
+    const dispatch = useDispatch();
+  
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        
+        setLoginCreds({
+          ...loginCreds,
+          [name]: value,
+        });
+      };
+    
+    console.log(loginCreds);
+    
+    useEffect(()=>{
+    if(isAuth){
+        navigate("/login");
+    }
+    },[isAuth])
+
+const handleClick =()=>{
+    dispatch(signupAPI(loginCreds)); 
+}
+
   return (
     <div bgColor="
     #f2f6f8">
@@ -30,8 +61,19 @@ const Signup = () => {
                 <Box mt="30px">
                     <FormControl className={styles.inputContainer} bgColor="white" width="32%" margin="auto" height="auto" p="30px" >
                         <Heading color="black" fontSize="xl" fontWeight="600"> Sign up</Heading>
-                        <Input border="1px solid gray" mt="30px" h="40px" placeholder='Enter email' borderRadius="none" />
-                        <Input border="1px solid gray" mt="20px" h="40px" placeholder='Choose password' borderRadius="none" />
+                        <Input
+                        name='email'
+                        onChange={handleChange}
+                        color="black" 
+                        type="email" 
+                        border="1px solid gray" mt="30px" h="40px" placeholder='Enter email' borderRadius="none" />
+                        
+                        <Input
+                        name='password'
+                        onChange={handleChange}
+                        type="password"
+                        color="black"
+                        border="1px solid gray" mt="20px" h="40px" placeholder='Choose password' borderRadius="none" />
                         <Box display="flex" mt="15px" >
                             
                             <Box display="flex"  >
@@ -41,7 +83,7 @@ const Signup = () => {
                             <Text className={styles.links} >Terms of Use</Text> 
                             
                         </Box>
-                        <Button mb="20px" mt="15px" h="40px" bgColor="#5cc7f8" w="100%" borderRadius="none" >
+                        <Button onClick={handleClick} mb="20px" mt="15px" h="40px" bgColor="#5cc7f8" w="100%" borderRadius="none" >
                             CREATE FREE ACCOUNT</Button>
                         <Box display="flex" justifyContent="space-between">
                             <hr width="45%" /> 
