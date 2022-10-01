@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import SideBar from '../Time_Tracker/SideBar/SideBar';
 import Navbar from '../Navbar/Navbar';
+import Inner_Navbar from '../Time_Tracker/SideBar/Inner_Navbar';
 
 const getData = async () => {
   let res = await axios.get('http://localhost:8080/client');
@@ -53,7 +54,7 @@ function Clientsection() {
   return (
     <>
       <Box>
-        <Navbar />
+        <Inner_Navbar />
       </Box>
       <div style={{ display: 'flex' }}>
         <div>

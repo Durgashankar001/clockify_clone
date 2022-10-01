@@ -17,6 +17,7 @@ import ProjectHead from '../modal/ProjectHead';
 import TableContainethings from '../Table/TableContainethings';
 import SideBar from '../Time_Tracker/SideBar/SideBar';
 import Navbar from '../Navbar/Navbar';
+import Inner_Navbar from '../Time_Tracker/SideBar/Inner_Navbar';
 
 
 
@@ -24,7 +25,7 @@ const FilterSection = () => {
   return (
     <>
       <Box>
-        <Navbar />
+        <Inner_Navbar />
       </Box>
       <div style={{ display: 'flex' }}>
         <div>
