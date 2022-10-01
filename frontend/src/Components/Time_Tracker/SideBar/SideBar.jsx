@@ -34,7 +34,10 @@ const SideBar = () => {
 <h1 className='sideh12' >ANALYZE</h1>
 <Box className='boxside'><div className='divside'><BiGridAlt className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>dashboard</h1></div></Box>
 <h1 className='sideh12' >MANAGE</h1>
+
 <Box className='boxside'><div className='divside' onClick={project}><GoFile className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>projects</h1></div></Box>
+
+
 <Box className='boxside'><div className='divside'><HiOutlineUserGroup className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>team</h1></div></Box>
 <Box className='boxside' onClick={client}><div className='divside'><FaUserCircle className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>clients</h1></div></Box>
 <Box className='boxside' onClick={tags}><div className='divside'><FaTags className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>tags</h1></div></Box>
@@ -43,7 +46,7 @@ const SideBar = () => {
 <Box className='boxside'><div className='divside'><FaCalculator className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>kiosks</h1></div></Box>
 
      
-     </Box>
+ </Box>
     </div>
   )
 }

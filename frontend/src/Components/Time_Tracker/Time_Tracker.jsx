@@ -34,8 +34,10 @@ const Time_Tracker = () => {
 
 
   const getData = async () => {
+
     let res = await axios.get('https://legit-dust-8169.herokuapp.com/task');
     // https://legit-dust-8169.herokuapp.com/task
+
   
     return res.data;
   };
@@ -46,6 +48,7 @@ const Time_Tracker = () => {
       setData(res);
   
     });
+
   },[getData()])
 
   //delete
@@ -55,6 +58,9 @@ const handaledelete=(id)=>{
   // console.log("id",id)
 }
  
+
+  },[])
+
 
   return (
     <div >
@@ -115,7 +121,11 @@ const handaledelete=(id)=>{
            <button><GrPlay/></button>
           </div>
 
+
           <div className="A7"><button onClick={() => handaledelete(e._id)}><HiDotsVertical/></button></div>
+
+         
+
         
         </Box>
         ))
