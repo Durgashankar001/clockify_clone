@@ -76,9 +76,15 @@ useEffect(()=>{
     setData(res);
 
   });
-},[])
+},[getData()])
 
-console.log("data:",data)
+//delete
+
+// const delete=(id)=>(dispatch{}){
+
+// }
+
+
 
 
 
