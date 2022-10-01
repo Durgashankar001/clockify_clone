@@ -1,7 +1,7 @@
 import React from 'react';
 import './filterswection.css';
 import { FiSearch } from 'react-icons/fi';
-import { Button, Checkbox, Input, Portal, Text } from '@chakra-ui/react';
+import { Box, Button, Checkbox, Input, Portal, Text } from '@chakra-ui/react';
 import {
   Popover,
   PopoverTrigger,
@@ -16,15 +16,19 @@ import {
 import ProjectHead from '../modal/ProjectHead';
 import TableContainethings from '../Table/TableContainethings';
 import SideBar from '../Time_Tracker/SideBar/SideBar';
+import Navbar from '../Navbar/Navbar';
 
 
 
 const FilterSection = () => {
   return (
     <>
-      <div style={{display:"flex"}}>
+      <Box>
+        <Navbar />
+      </Box>
+      <div style={{ display: 'flex' }}>
         <div>
-          <SideBar/>
+          <SideBar />
         </div>
         <div>
           <ProjectHead />
