@@ -22,6 +22,9 @@ import { useState } from "react";
 import axios from 'axios';
 import { useEffect } from "react";
 
+import Inner_Navbar from "./SideBar/Inner_Navbar";
+
+
 
 
 const AddPage = () => {
@@ -47,7 +50,11 @@ const AddPage = () => {
     
       }
     
+
+    fetch(`https://legit-dust-8169.herokuapp.com/task/new`,{
+
     fetch(`http://localhost:8080/task/new`,{
+
       method:"POST",
       headers:{ "Content-Type": "application/json"},
       body: JSON.stringify(payload),
@@ -66,7 +73,11 @@ const AddPage = () => {
 
 //GET
 const getData = async () => {
+
+  let res = await axios.get('https://legit-dust-8169.herokuapp.com/task');
+
   let res = await axios.get('http://localhost:8080/task');
+
 
   return res.data;
 };
@@ -83,6 +94,14 @@ useEffect(()=>{
 // const delete=(id)=>(dispatch{}){
 
 // }
+
+
+const handaledelete=(id)=>{
+  axios.delete(`https://legit-dust-8169.herokuapp.com/task/delete/${id}`)
+  .then(()=>{console.log(id)})
+  // console.log("id",id)
+}
+
 
 
 
@@ -103,7 +122,11 @@ useEffect(()=>{
     <div>
       
       <Box>
+
+     <Inner_Navbar/>
+
         <Navbar />
+
       </Box>
       <Box>
       <Box className="timePage">
@@ -197,7 +220,12 @@ useEffect(()=>{
            <button><GrPlay/></button>
           </div>
 
+{/* //delete */}
+          <div className="A7"><button onClick={() => handaledelete(e._id)}><HiDotsVertical/></button></div>
+
+
           <div className="A7"><button><HiDotsVertical/></button></div>
+
         
         </Box>
         ))
