@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Signup = () => {
 
     const isAuth = useSelector((store)=> store.auth.data.isAuthenticated)
-    console.log(isAuth);
+    
     const navigate = useNavigate();
     // const { state } = useLocation();
     const [loginCreds, setLoginCreds] = useState({});
@@ -24,15 +24,12 @@ const Signup = () => {
       };
     
     console.log(loginCreds);
-    // useEffect(()=>{
-    // if(isAuth){
-    //   if (state.from) {
-    //     navigate(state.from, { replace: true });
-    //   } else {
-        // navigate("/login");
-    //   }
-    // }
-    // },[isAuth])
+    
+    useEffect(()=>{
+    if(isAuth){
+        navigate("/login");
+    }
+    },[isAuth])
 
 const handleClick =()=>{
     dispatch(signupAPI(loginCreds)); 
