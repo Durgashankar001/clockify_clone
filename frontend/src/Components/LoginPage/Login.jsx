@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Text } from '@chakra-ui/react'
+import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Text, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import styles from "./login.module.css"
 import { Link as RouterLink, useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [loginCreds, setLoginCreds] = useState({});
     const dispatch = useDispatch();
+    const toast = useToast()
   
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -31,6 +32,14 @@ const Login = () => {
 
 const handleClick =()=>{
     dispatch(loginAPI(loginCreds)); 
+    toast({
+        title: "Login Successfull.",
+        description: "Start utilizing your time wisely",
+        position: "top",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
 }
 
   return (

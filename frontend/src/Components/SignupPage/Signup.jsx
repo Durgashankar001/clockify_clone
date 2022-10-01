@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Text } from '@chakra-ui/react'
+import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Text ,useToast} from '@chakra-ui/react'
 import styles from "./signup.module.css"
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { signupAPI } from '../../store/auth/auth.actions';
@@ -11,6 +11,7 @@ const Signup = () => {
     const navigate = useNavigate();
     const [loginCreds, setLoginCreds] = useState({});
     const dispatch = useDispatch();
+    const toast = useToast();
   
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -31,6 +32,14 @@ const Signup = () => {
 
 const handleClick =()=>{
     dispatch(signupAPI(loginCreds)); 
+    toast({
+        title: "Account created.",
+        description: "Start your time tracking journey",
+        position: "top",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
 }
 
   return (

@@ -204,7 +204,7 @@ const HomePage = () => {
                             boxShadow={"md"}
                             _hover={{ bg: "blue.400" }}
                             bgColor={"#03A9F4"} >
-                            <Link to="/">
+                            <Link to="/tracker">
                                 <Text fontWeight={400} fontSize={["xs", "md"]}>
                                     START TRACKING TIME — IT'S FREE!
                                 </Text>
