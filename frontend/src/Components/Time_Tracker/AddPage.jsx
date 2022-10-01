@@ -3,7 +3,6 @@ import React from "react";
 import StopWatch from "./StopWatch";
 import "./Timer.css";
 import {
-  
   FaPlusCircle,
   FaStopwatch,
   FaCommentDots,
