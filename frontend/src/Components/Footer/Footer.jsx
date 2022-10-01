@@ -12,7 +12,7 @@ import {
     Wrap,
     WrapItem,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link }  from "react-router-dom";
 import {AiOutlineTwitter} from "react-icons/ai"
 import {BsFacebook} from "react-icons/bs"
 import {FaInstagramSquare} from "react-icons/fa"
