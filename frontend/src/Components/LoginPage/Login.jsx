@@ -85,7 +85,7 @@ const handleClick =()=>{
                             
                         </Box>
                         <Button onClick={handleClick} mb="20px" mt="15px" h="40px" bgColor="#5cc7f8" w="100%" borderRadius="none" >
-                            CREATE FREE ACCOUNT</Button>
+                            LOG IN</Button>
                         <Box display="flex" justifyContent="space-between">
                             <hr width="45%" /> 
                             <Text color="black" mt="-10px">OR</Text> 
