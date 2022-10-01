@@ -28,6 +28,7 @@ import {
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { getData2 } from '../Table/TableContainethings';
 
 // import './modal.css'
 
@@ -57,10 +58,10 @@ export default function BasicUsage() {
       name: name,
       tag: 'active',
       billable: false,
-      useremail: client
+      useremail: client || "no client"
     });
-
     onClose()
+   
   }
 
 
