@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, Checkbox, FormControl, Heading, Image, Input, Select, Text } from '@chakra-ui/react'
 import styles from "./signup.module.css"
-import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { signupAPI } from '../../store/auth/auth.actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Signup = () => {
 
-    const isAuth = useSelector((store)=> store.auth.data.isAuthenticated)
-    
+    const isAuth = useSelector((store)=> store.auth.signupSuccess)   
     const navigate = useNavigate();
-    // const { state } = useLocation();
     const [loginCreds, setLoginCreds] = useState({});
     const dispatch = useDispatch();
   
