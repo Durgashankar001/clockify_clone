@@ -13,7 +13,7 @@ import {
 export const signupAPI = (creds)=> async(dispatch)=>{
     dispatch({type:AUTH_SIGN_IN_LOADING})
     try{
-        let response = await axios.post("http://localhost:8080/user/signup",creds)
+        let response = await axios.post("https://legit-dust-8169.herokuapp.com/user/signup",creds)
         dispatch({type:AUTH_SIGN_IN_SUCCESS,payload:response.data})
         console.log(response.data)
         return response.data
@@ -26,7 +26,7 @@ export const signupAPI = (creds)=> async(dispatch)=>{
 export const loginAPI = (creds)=> async(dispatch)=>{
     dispatch({type:AUTH_LOGIN_LOADING})
     try{
-        let response = await axios.post("http://localhost:8080/user/login",creds)
+        let response = await axios.post("https://legit-dust-8169.herokuapp.com/user/login",creds)
         dispatch({type:AUTH_LOGIN_SUCCESS,payload:response.data})
         console.log(response.data)
         return response.data
