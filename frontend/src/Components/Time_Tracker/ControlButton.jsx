@@ -16,11 +16,11 @@ const ControlButton = (props) => {
                onClick={props.handleReset}>
             Stop
           </div>
-          <div className="btn btn-one" 
+          {/* <div className="btn btn-one" 
                onClick={props.handlePauseResume}
                >
             {props.isPaused ? "Resume" : "Pause"}
-          </div>
+          </div> */}
         </div>
       );
       
