@@ -3,7 +3,11 @@ import {
     AUTH_SIGN_IN_LOADING,
     AUTH_SIGN_IN_SUCCESS,
     AUTH_SIGN_IN_ERROR,
-    AUTH_SIGN_OUT,
+
+    AUTH_LOGIN_LOADING,
+    AUTH_LOGIN_SUCCESS,
+    AUTH_LOGIN_ERROR ,
+    AUTH_LOGOUT,
 } from "./auth.types";
 
 export const signupAPI = (creds)=> async(dispatch)=>{
@@ -18,6 +22,20 @@ export const signupAPI = (creds)=> async(dispatch)=>{
     }
     
 }
+
+export const loginAPI = (creds)=> async(dispatch)=>{
+    dispatch({type:AUTH_LOGIN_LOADING})
+    try{
+        let response = await axios.post("http://localhost:8080/user/login",creds)
+        dispatch({type:AUTH_LOGIN_SUCCESS,payload:response.data})
+        console.log(response.data)
+        return response.data
+    }catch(e){
+        dispatch({type:AUTH_LOGIN_ERROR})
+    }
+    
+}
+
 export const logout = (dispatch)=>{
-    dispatch({type:AUTH_SIGN_OUT})
+    dispatch({type:AUTH_LOGOUT})
 }
