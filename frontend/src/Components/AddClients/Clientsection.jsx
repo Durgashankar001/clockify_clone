@@ -60,8 +60,8 @@ function Clientsection() {
         <div>
           <SideBar />
         </div>
-        <div>
-          <div style={{ padding: '20px' }}>
+        <div style={{background:"#f2f6f8",paddingTop:"4rem",marginTop:"0px",width:"100%",paddingLeft:"1rem",paddingRight:"1rem"}}>
+          <div >
             <Text fontSize="xl" mb={30} px="4" py="4">
               Clients
             </Text>
@@ -110,7 +110,7 @@ function Clientsection() {
 
             <Box bg="aliceblue" h="30" w="100%" color="grey" mt={30}>
               <TableContainer>
-                <Table variant="simple">
+                <Table variant='striped' colorScheme='#e8f5fd'>
                   <Thead>
                     <Tr>
                       <Th>NAME</Th>
@@ -128,7 +128,7 @@ function Clientsection() {
                           return ele;
                         }
                       }).map((ele) => (
-                        <Tr>
+                        <Tr bg={"#e8f5fd"}>
                           <Td>{ele.name}</Td>
                           <Td>{ele.address}</Td>
                         </Tr>

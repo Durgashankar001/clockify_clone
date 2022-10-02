@@ -59,7 +59,7 @@ const handaledelete=(id)=>{
 }
  
 
-  },[])
+  // },[])
 
 
   return (

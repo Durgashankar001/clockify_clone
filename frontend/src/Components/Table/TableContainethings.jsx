@@ -68,10 +68,11 @@ const TableContainethings = () => {
       </Box>
 
       <TableContainer>
-        <Table variant="simple">
+        <Table variant='striped' colorScheme='#e8f5fd'>
           <Thead>
             <Tr>
-              <Checkbox mt={3} px={5}></Checkbox> <Th>NAME</Th>
+              <Th><Checkbox mt={3} px={5}></Checkbox></Th>
+               <Th>NAME</Th>
               <Th>CLIENT</Th>
               <Th>AMOUNT</Th>
               <Th>PROGRESS</Th>
@@ -82,9 +83,10 @@ const TableContainethings = () => {
           </Thead>
           <Tbody>
             {Allclient &&
-              Allclient.reverse().map((ele) => (
-                <Tr>
-                  <Checkbox mt={8} px={5}></Checkbox> <Td>{ele.name}</Td>
+              Allclient.map((ele) => (
+                <Tr bg={"#e8f5fd"}>
+                  <Td><Checkbox mt={3} px={5}></Checkbox></Td>
+                   <Td>{ele.name}</Td>
                   <Td>{ele.useremail}</Td>
                   <Td>0.00h</Td>
                   <Td>0.00 USD</Td>

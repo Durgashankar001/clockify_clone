@@ -53,7 +53,7 @@ const AddPage = () => {
 
     fetch(`https://legit-dust-8169.herokuapp.com/task/new`,{
 
-    fetch(`http://localhost:8080/task/new`,{
+    // fetch(`http://localhost:8080/task/new`,{
 
       method:"POST",
       headers:{ "Content-Type": "application/json"},
@@ -76,7 +76,7 @@ const getData = async () => {
 
   let res = await axios.get('https://legit-dust-8169.herokuapp.com/task');
 
-  let res = await axios.get('http://localhost:8080/task');
+  // let res = await axios.get('http://localhost:8080/task');
 
 
   return res.data;

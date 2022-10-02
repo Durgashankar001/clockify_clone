@@ -25,11 +25,11 @@ const FilterSection = () => {
       <Box>
         <Inner_Navbar />
       </Box>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex',marginTop:"0px" }}>
         <div>
           <SideBar />
         </div>
-        <div>
+        <div style={{background:"#f2f6f8",paddingTop:"4rem",marginTop:"0px",width:"100%",paddingLeft:"1rem",paddingRight:"1rem"}}>
           <ProjectHead />
 
           <div className="container">

@@ -15,7 +15,7 @@ const SideBar = () => {
     navigate("/tracker")
   }
 
-  function project(){
+  function Project(){
     navigate("/project")
   }
   function client(){
@@ -35,7 +35,7 @@ const SideBar = () => {
 <Box className='boxside'><div className='divside'><BiGridAlt className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>dashboard</h1></div></Box>
 <h1 className='sideh12' >MANAGE</h1>
 
-<Box className='boxside'><div className='divside' onClick={project}><GoFile className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>projects</h1></div></Box>
+<Box className='boxside' onClick={Project}><div className='divside' ><GoFile className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>projects</h1></div></Box>
 
 
 <Box className='boxside'><div className='divside'><HiOutlineUserGroup className='sideicon'/></div><div className='divside1'><h1 className='sideh1'>team</h1></div></Box>

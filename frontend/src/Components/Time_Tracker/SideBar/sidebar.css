@@ -14,6 +14,8 @@ font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica N
 .mainbox{
     width: 250px;
     background-color: white;
+    border-right: 1px solid black;
+    padding-top: 30px;
 }
 .boxside:hover{
     background-color:
@@ -42,7 +44,7 @@ font-size: 14px;
     display: flex;
     width: 100%;
     height: 50px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     border: 1px solid gray;
     justify-content: space-between;
     padding: 20px;

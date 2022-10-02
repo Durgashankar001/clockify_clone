@@ -55,7 +55,7 @@ function Tagsection() {
           <SideBar />
         </div>
         <div>
-          <div style={{ padding: '20px' }}>
+          <div style={{background:"#f2f6f8",paddingTop:"4rem",marginTop:"0px",width:"100%",paddingLeft:"1rem",paddingRight:"1rem",height:"100vh",overflowY:"scroll"}}>
             <Text fontSize="xl" mb={30} px="4" py="4">
               Tags
             </Text>
@@ -111,7 +111,7 @@ function Tagsection() {
                   return ele;
                 }
               }).map((ele) => (
-                <Box bg="aliceblue" h="30" w="100%" color="grey" mt={30}>
+                <Box bg="aliceblue" h="30" w="100%" color="grey" py={30} style={{borderBottom:"1px solid black"}}>
                   <Text fontSize="md" px="3">
                     {ele.name}
                   </Text>
