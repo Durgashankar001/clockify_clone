@@ -38,7 +38,7 @@ function StopWatch({ name }) {
     const payload = {
       name: "Navbar",
       startAt: startAtHour+" : "+startAt,
-      endAt: endAtHour+" : "+startAt,
+      endAt: startAtHour+" : "+startAt,
       totalTime: time/1000
 
 

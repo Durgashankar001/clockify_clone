@@ -3,6 +3,7 @@ import React from 'react'
 import "./sidebar.css";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { AiFillQuestionCircle,AiOutlineBell } from "react-icons/ai";
+import { Link as RouterLink } from "react-router-dom";
 
 const Inner_Navbar = () => {
   return (
@@ -10,7 +11,9 @@ const Inner_Navbar = () => {
    <Box className='mainNav'>
         <Box className='mainNav1'>
           < BsFillGrid3X3GapFill className='bell'/>
+          <RouterLink to={"/"}>
           <img className='imgk1' src="https://clockify.me/assets/images/clockify-logo.svg" alt="" />
+          </RouterLink>
        <button className='btnre'>Request demo</button>
        
         </Box>

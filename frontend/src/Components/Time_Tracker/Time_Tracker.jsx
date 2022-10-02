@@ -106,8 +106,8 @@ const handaledelete=(id)=>{
             <FaGripLinesVertical className="hicon" />
             
           </div>
-          <div className="A4"><h1>{e.startAt}</h1>-
-            <h1>{e.endAt}</h1></div>
+          <div className="A4"><h1>{e.startAt} </h1>-
+            <h1> {e.endAt}</h1></div>
           <div className="A5">
            
             <FaRegCalendarAlt /> 
