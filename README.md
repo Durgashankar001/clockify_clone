@@ -6,7 +6,7 @@ This was a collaborative project made by 4 members Executed in 5 days.
 2) Durgashankar Pal
 3) Dipak
 4) Ankit
-5) Saichin
+5) Sachin
 
 
   Deploy Link -Netlify:https://clockifyy.netlify.app/
