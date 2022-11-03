@@ -51,7 +51,7 @@ This was a collaborative project made by 4 members Executed in 5 days.
 
 - **Project_Page**
 
-  !![c4](https://user-images.githubusercontent.com/101570475/199782055-92f87ec7-ad65-4c3f-8c19-b9d5bb6ce021.png
+  ![c4](https://user-images.githubusercontent.com/101570475/199782055-92f87ec7-ad65-4c3f-8c19-b9d5bb6ce021.png
 
 
 ---
