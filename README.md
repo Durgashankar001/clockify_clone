@@ -58,7 +58,7 @@ This was a collaborative project made by 4 members Executed in 5 days.
 
 ### About Project
 
-> 
+> Clockify is one of the best Time tracking website. In this website you can easily track your time and manage also. We the group of five people made this project at our construct week while we were in unit five at masai school. If you want you can fork our repo and easily make this website and clone this beautiful website very easily.
 
 ---
 
