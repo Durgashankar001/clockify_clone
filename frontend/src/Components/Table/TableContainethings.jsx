@@ -32,7 +32,7 @@ import axios from 'axios';
 // import './modal.css'
 
 export const getData2 = async () => {
-  let res = await axios.get('https://legit-dust-8169.herokuapp.com/project');
+  let res = await axios.get('https://adorable-gold-springbok.cyclic.app/project');
 
   return res.data;
 };
@@ -52,7 +52,7 @@ const TableContainethings = () => {
     const handleDelete = async (id) =>{
       console.log(id)
       let res = await axios.delete(
-        `https://legit-dust-8169.herokuapp.com/project/${id}`
+        `https://adorable-gold-springbok.cyclic.app/project/${id}`
       );
       getData2().then((res) => {
         setAllclient(res)

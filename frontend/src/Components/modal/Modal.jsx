@@ -33,7 +33,7 @@ import { getData2 } from '../Table/TableContainethings';
 // import './modal.css'
 
 const getData = async () => {
-  let res = await axios.get('https://legit-dust-8169.herokuapp.com/client');
+  let res = await axios.get('https://adorable-gold-springbok.cyclic.app/client');
 
   return res.data;
 };
@@ -48,7 +48,7 @@ export default function BasicUsage() {
   console.log(client);
 
   const handalAdd = async () => {
-    await axios.post('https://legit-dust-8169.herokuapp.com/project/new', {
+    await axios.post('https://adorable-gold-springbok.cyclic.app/project/new', {
       name: name,
       tag: 'active',
       billable: false,

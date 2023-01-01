@@ -44,14 +44,14 @@ function StopWatch({ name }) {
 
     }
     console.log("total", totalTime)
-    fetch(`https://legit-dust-8169.herokuapp.com/task/new`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    fetch(`https://adorable-gold-springbok.cyclic.app/task/new`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
       .then((res) => res.json())
       .then((res) => console.log(res))
-      .then(() => setName1(""))
+      .then(() => setName1(''));
     setTimeout(() => {
       setstartAt("");
       setendAt("");
