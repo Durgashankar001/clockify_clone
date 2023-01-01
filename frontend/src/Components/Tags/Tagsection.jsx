@@ -15,7 +15,7 @@ import Navbar from '../Navbar/Navbar';
 import Inner_Navbar from '../Time_Tracker/SideBar/Inner_Navbar';
 
 const getData = async () => {
-  let res = await axios.get('https://legit-dust-8169.herokuapp.com/tag');
+  let res = await axios.get('https://adorable-gold-springbok.cyclic.app/tag');
 
   return res.data;
 };
@@ -36,7 +36,7 @@ function Tagsection() {
   console.log(client);
 
   const handalAdd = async () => {
-    await axios.post('https://legit-dust-8169.herokuapp.com/tag/new', {
+    await axios.post('https://adorable-gold-springbok.cyclic.app/tag/new', {
       name: client,
     });
 

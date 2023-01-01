@@ -51,9 +51,9 @@ const AddPage = () => {
       }
     
 
-    fetch(`https://legit-dust-8169.herokuapp.com/task/new`,{
+    fetch(`https://adorable-gold-springbok.cyclic.app/task/new`,{
 
-    // fetch(`http://localhost:8080/task/new`,{
+    // fetch(`https://adorable-gold-springbok.cyclic.app/task/new`,{
 
       method:"POST",
       headers:{ "Content-Type": "application/json"},
@@ -74,9 +74,9 @@ const AddPage = () => {
 //GET
 const getData = async () => {
 
-  let res = await axios.get('https://legit-dust-8169.herokuapp.com/task');
+  let res = await axios.get('https://adorable-gold-springbok.cyclic.app/task');
 
-  // let res = await axios.get('http://localhost:8080/task');
+  // let res = await axios.get('https://adorable-gold-springbok.cyclic.app/task');
 
 
   return res.data;
@@ -97,7 +97,7 @@ useEffect(()=>{
 
 
 const handaledelete=(id)=>{
-  axios.delete(`https://legit-dust-8169.herokuapp.com/task/delete/${id}`)
+  axios.delete(`https://adorable-gold-springbok.cyclic.app/task/delete/${id}`)
   .then(()=>{console.log(id)})
   // console.log("id",id)
 }

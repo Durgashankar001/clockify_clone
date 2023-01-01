@@ -35,8 +35,8 @@ const Time_Tracker = () => {
 
   const getData = async () => {
 
-    let res = await axios.get('https://legit-dust-8169.herokuapp.com/task');
-    // https://legit-dust-8169.herokuapp.com/task
+    let res = await axios.get('https://adorable-gold-springbok.cyclic.app/task');
+    // https://adorable-gold-springbok.cyclic.app/task
 
   
     return res.data;
@@ -53,7 +53,7 @@ const Time_Tracker = () => {
 
   //delete
 const handaledelete=(id)=>{
-  axios.delete(`https://legit-dust-8169.herokuapp.com/task/delete/${id}`)
+  axios.delete(`https://adorable-gold-springbok.cyclic.app/task/delete/${id}`)
   .then(()=>{console.log(id)})
   // console.log("id",id)
 }

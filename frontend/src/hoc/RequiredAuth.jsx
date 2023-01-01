@@ -24,8 +24,8 @@ import { Navigate, useLocation, useNavigate } from "react-router-dom";
 // export default RequiredAuth;
 
 const RequiredAuth = ({ children }) => {
-  const isAuthenticated= useSelector((store)=>store.auth.data.isAuthenticated);
-    const token = useSelector((store)=>store.auth.data.token);
+  // const isAuthenticated= useSelector((store)=>store.auth.data.isAuthenticated);
+    const token = useSelector((store)=>store.auth.token);
   const location = useLocation();
 
   if (token) {
